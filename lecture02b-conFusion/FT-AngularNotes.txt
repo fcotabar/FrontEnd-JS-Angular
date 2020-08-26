@@ -1,0 +1,7 @@
+STRUCTURAL DIRECTIVES (common ones)
+
+NgIf: *ngIf="condition"
+
+NgFor: *ngFor="let item of items"
+
+NgSwitch: *ngSwitch="todavía no sé....
