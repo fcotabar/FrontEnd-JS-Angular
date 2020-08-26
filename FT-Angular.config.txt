@@ -1,0 +1,52 @@
+
+To use angular materials (instead of Bootstrap)
+CONFIGURING ANGULAR TO USE MATERIALS AND FLEX LAYOUT
+
+
+
+** Materials
+npm install @angular/material@6.4.7 --save
+
+*** Cdk
+npm install @angular/cdk@6.4.7 --save
+
+*** Animations
+npm install @angular/animations --save
+
+*** HammerJS
+npm install hammerjs@2.0.8 --save
+
+*** Flex
+npm install @angular/flex-layout@7.0.0-beta.19 --save
+
+
+*** In the index.html
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+*** In app.module.ts
+    ...
+
+    import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+    import { MatToolbarModule } from '@angular/material/toolbar';
+    import { FlexLayoutModule } from '@angular/flex-layout';
+    ....
+
+    import 'hammerjs';
+
+    ...
+        in @NgModule:
+        ....
+        
+        imports: [
+            BrowserModule,
+            AppRoutingModule,
+            BrowserAnimationsModule,
+            MatToolbar,
+            FlexLayoutModule
+
+        ]
+
+    ....
+
+*** Font Awesome
+npm install font-awesome@4.7.0 --save

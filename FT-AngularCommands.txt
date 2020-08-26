@@ -1,0 +1,38 @@
+CREATE A PROJECT:
+ng new [projectName]
+
+START SERVER
+ng serve
+
+START A PROJECT (uses the package.json)
+npm install
+**Note: it should be in the project directory
+
+    To clear existing node_modules/ directory:
+    1) rm -rf node_modules/
+    2) npm install
+
+
+CREAT A COMPONENT
+ng g c componentName
+    *** Note: g stands for generate,
+              c stands for component
+              componentName: it would be add to the src/app/ directory
+    The component must be declaired in the app.module:
+        It must be imported: import { ComponentName } from 'pathFile';
+        It should be declared in the declarations array section: declarations: [..., ComponentName, ...]
+
+
+CREAT A SERVICE
+ng g s serviceName
+    *** Note: g stands for generate,
+              s stands for serivice
+              serviceName: it would be add to the src/app/ directory
+    The service must be declaired in the app.module:
+        It must be imported: import { ServiceName } from 'pathFile';
+        It should be declared in the providers array section: providers: [..., ServiceName, ...]
+    In the component the sevice should be injected:
+        It must be imported: import { ServiceName } from 'pathFile';
+        The constuctor should initiate the services:  constructor(private nameService: NameService){}
+        To use the service is on the onInit function: onInit() {...; this.nameService; ...}
+
