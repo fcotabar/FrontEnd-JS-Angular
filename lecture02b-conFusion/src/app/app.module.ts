@@ -23,6 +23,7 @@ import { ContactComponent } from './contact/contact.component';
 
 // Import services file: it should be imported as a provider
 import { DishService } from './services/dish.service';
+import { PromotionService } from './services/promotion.service';
 
 
 @NgModule({
@@ -48,7 +49,8 @@ import { DishService } from './services/dish.service';
     MatButtonModule
   ],
   providers: [
-    DishService
+    DishService,
+    PromotionService
   ],
   bootstrap: [AppComponent]
 })
